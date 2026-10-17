@@ -1,0 +1,34 @@
+backend:
+  name: github
+  repo: bilkay123/tarifveyasam
+  branch: main
+
+media_folder: "images"
+public_folder: "/tarifveyasam/images"
+
+locale: "tr"
+
+collections:
+  - name: "tarifler"
+    label: "Yemek Tarifleri"
+    folder: "icerikler/tarifler"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    fields:
+      - {label: "Başlık", name: "title", widget: "string"}
+      - {label: "Tarih", name: "date", widget: "datetime"}
+      - {label: "Fotoğraf", name: "image", widget: "image"}
+      - {label: "Malzemeler ve Hazırlanışı", name: "body", widget: "markdown"}
+
+  - name: "yazilar"
+    label: "Ev ve Yaşam Yazıları"
+    folder: "icerikler/yazilar"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    fields:
+      - {label: "Başlık", name: "title", widget: "string"}
+      - {label: "Tarih", name: "date", widget: "datetime"}
+      - {label: "Fotoğraf", name: "image", widget: "image"}
+      - {label: "Yazı", name: "body", widget: "markdown"}
